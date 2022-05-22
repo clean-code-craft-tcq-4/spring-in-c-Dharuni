@@ -1,10 +1,10 @@
 #include "stats.h"
 
-struct Stats{
+typedef struct {
     float average;
     float min;
     float max;
-};
+}Stats;
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
