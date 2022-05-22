@@ -21,8 +21,6 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
 
     if(setjmp(savebuf) == 0)
     {
-        if(setlength <=0)
-        {
             for(i = 0; i< setlength; i++)
             {
                 sum = sum + numberset[i];
@@ -40,8 +38,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
                 {
                     s.min = numberset[i];
                 }        
-            }
-        }
+            }        
     }
     return s;
 }
