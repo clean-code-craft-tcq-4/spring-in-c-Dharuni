@@ -21,24 +21,27 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
 
     if(setjmp(savebuf) == 0)
     {
-        for(i = 0; i< setlength; i++)
+        if(setlength <=0)
         {
-            sum = sum + numberset[i];
-        }
-        s.average = sum / setlength;
-        s.max = numberset[0];
-        s.min = numberset[0];
-        for(i = 1; i< setlength; i++)
-        {
-            if( numberset[i] > s.max)
+            for(i = 0; i< setlength; i++)
             {
-                s.max = numberset[i];
+                sum = sum + numberset[i];
             }
-            if( numberset[i] < s.min)
+            s.average = sum / setlength;
+            s.max = numberset[0];
+            s.min = numberset[0];
+            for(i = 1; i< setlength; i++)
             {
-                s.min = numberset[i];
-            }        
-        }        
+                if( numberset[i] > s.max)
+                {
+                    s.max = numberset[i];
+                }
+                if( numberset[i] < s.min)
+                {
+                    s.min = numberset[i];
+                }        
+            }
+        }
     }
     return s;
 }
