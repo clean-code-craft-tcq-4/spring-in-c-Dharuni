@@ -1,5 +1,11 @@
 #include "stats.h"
 
+struct Stats{
+    float average;
+    float min;
+    float max;
+}
+
 Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     s.average = 0;
