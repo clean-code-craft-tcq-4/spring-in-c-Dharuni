@@ -14,11 +14,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     {
         sum = sum + numberset[i];
     }
-    if(sum == 0)
-    {
-        s.average = NAN;
-    }
-    else
+    if(sum != 0)
     {
         s.average = sum / setlength;
     }
