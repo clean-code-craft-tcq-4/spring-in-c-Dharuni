@@ -14,7 +14,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     int i;
     float sum=0;
     
-    if (setlength < = 0)
+    if (setlength <= 0)
     {
         longjmp(savebuf,1);
     }
