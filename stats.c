@@ -18,12 +18,13 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     {
         longjmp(savebuf,1);
     }
-    for(i = 0; i< setlength; i++)
-    {
-        sum = sum + numberset[i];
-    }
+
     if(setjmp(savebuf) == 0)
     {
+        for(i = 0; i< setlength; i++)
+        {
+            sum = sum + numberset[i];
+        }
         s.average = sum / setlength;
         s.max = numberset[0];
         s.min = numberset[0];
