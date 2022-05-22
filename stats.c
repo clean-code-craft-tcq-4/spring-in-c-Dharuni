@@ -17,7 +17,10 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     {
         exit(EXIT_FAILURE);
     }
-    s.average = sum / setlength;
+    else
+    {
+        s.average = sum / setlength;
+    }
     s.max = numberset[0];
     s.min = numberset[0];
     for(i = 1; i< setlength; i++)
