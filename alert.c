@@ -1,6 +1,7 @@
 #include "stats.h"
 #include "stdio.h"
 #include "stdlib.h"
+#include "alert.h"
 
 void emailAlerter(void)
 {
