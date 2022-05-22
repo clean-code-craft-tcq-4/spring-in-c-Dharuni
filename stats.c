@@ -11,6 +11,10 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     {
         sum = sum + numberset[i];
     }
+    if(sum == 0)
+    {
+        exit(EXIT_FAILURE);
+    }
     s.average = sum / setlength;
     s.max = numberset[0];
     s.min = numberset[0];
