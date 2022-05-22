@@ -38,15 +38,12 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
                 s.min = numberset[i];
             }        
         }
+        return s;
     }
     else
     {
-        s.average = NAN;
-        s.min = NAN;
-        s.max = NAN;
-    }
-
-    return s;
+        return 0;
+    }   
 }
 
 int emailAlertCallCount = 0;
