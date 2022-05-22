@@ -15,7 +15,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     }
     if(sum == 0)
     {
-        exit(EXIT_FAILURE);
+        s.average = NAN;
     }
     else
     {
