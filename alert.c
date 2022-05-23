@@ -6,11 +6,11 @@
 
 void emailAlerter(void)
 {
-  emailAlertCallCount = 1;
+  emailAlertCallCount++;
 }
 
 void ledAlerter(void)
 {
-  ledAlertCallCount = 1;
+  ledAlertCallCount++;
 }
 
